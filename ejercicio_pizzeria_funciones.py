@@ -86,9 +86,7 @@ def realizar_pedido():
     if not cliente_nombre_pedido.strip():
         print("El nombre del cliente no puede estar vacío")
         return
-
     codigo_pizza_pedido = input("Ingrese el código de la pizza que desea pedir: ").strip().upper()
-
     pizza_encontrada = None
     for pizza in pizzas:
         if pizza['codigo'] == codigo_pizza_pedido:
@@ -142,7 +140,6 @@ def ver_pedidos():
             print(f"Total Pagado: ${pedido['total_pagado']:.2f}")
             print("-------------------")
     print("Fin del historial de pedidos.")
-
 while True:
     print("\n--- Sistema de Gestión de Pizzería ---")
     print("1. Registrar pizza")
@@ -157,7 +154,6 @@ while True:
     except ValueError:
         print("Por favor, ingresa una de las opciones del menú")
         continue 
-    
     if opcion == 1:
         registrar_pizza()
     elif opcion == 2:
